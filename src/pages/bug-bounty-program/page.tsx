@@ -44,7 +44,7 @@ export function Page() {
               </Text>
 
               <Stack gap={'clamp(12px, 2vw, 2rem)'} >
-                <Title order={4} fz={{0: 20, md: 24}} color="white" className={classes.blueText}>
+                <Title order={4} fz={{0: 20, md: 24}} c="white" className={classes.blueText}>
                   Ineligibility
                 </Title>
 
@@ -55,7 +55,7 @@ export function Page() {
               </Stack>
 
               <Stack gap={'clamp(12px, 2vw, 2rem)'} >
-                <Title order={4} fz={{0: 20, md: 24}} color="white" className={classes.blueText}>
+                <Title order={4} fz={{0: 20, md: 24}} c="white" className={classes.blueText}>
                   WEB
                 </Title>
 
@@ -103,7 +103,7 @@ export function Page() {
               </Stack>
 
               <Stack gap={'clamp(12px, 2vw, 2rem)'} >
-                <Title order={4} fz={{0: 20, md: 24}} color="white" className={classes.blueText}>
+                <Title order={4} fz={{0: 20, md: 24}} c="white" className={classes.blueText}>
                   MOBILE
                 </Title>
                 <Text fz={{0: 16, md: 20}} color="white">
@@ -126,7 +126,7 @@ export function Page() {
               </Stack>
 
               <Stack gap={'clamp(12px, 2vw, 2rem)'} >
-                <Title order={4} fz={{0: 20, md: 24}} color="white" className={classes.blueText}>
+                <Title order={4} fz={{0: 20, md: 24}} c="white" className={classes.blueText}>
                   Reward
                 </Title>
 
@@ -144,7 +144,7 @@ export function Page() {
               </Stack>
 
               <Stack gap={'clamp(12px, 2vw, 2rem)'} >
-                <Title order={4} fz={{0: 20, md: 24}} color="white" className={classes.blueText}>
+                <Title order={4} fz={{0: 20, md: 24}} c="white" className={classes.blueText}>
                 Rules and Guidelines to Report the Vulnerabilities and Get the Reward
                 </Title>
 
@@ -170,7 +170,7 @@ export function Page() {
               </Stack>
 
               <Stack gap={'clamp(12px, 2vw, 2rem)'} >
-                <Title order={4} fz={{0: 20, md: 24}} color="white" className={classes.blueText}>
+                <Title order={4} fz={{0: 20, md: 24}} c="white" className={classes.blueText}>
                 Non-security Issues
                 </Title>
 
