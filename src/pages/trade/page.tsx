@@ -14,7 +14,7 @@ export function Page() {
       <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/light/my-profile/3.png`} alt="main-light-3" className={classes.lightThree} />
       <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/light/my-profile/1.png`} alt="light-3" className={classes.lightFour} />
 
-      <Header width={1460} />
+      <Header />
       <Container width={1460}>
         <TradeContent />
       </Container>

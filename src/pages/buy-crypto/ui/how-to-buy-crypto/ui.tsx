@@ -1,7 +1,6 @@
 import classes from "./styles.module.css";
 import { Divider, Flex, rem, Stack, Text, Title } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
-import { step } from "effector";
 import { motion } from "framer-motion";
 
 const steps = [
