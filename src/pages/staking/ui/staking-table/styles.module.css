@@ -154,9 +154,6 @@
   .table-tr th {
     padding: 1rem 0 !important;
   }
-  table {
-    min-width: 440px;
-  }
   .table-td span {
     font-size: 1rem;
   }
