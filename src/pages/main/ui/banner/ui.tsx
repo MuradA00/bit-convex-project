@@ -61,7 +61,7 @@ export const Banner = () => {
                   START TRADING
                 </Button>
               </Link>
-            M</Stack>
+            </Stack>
           </Stack>
         </motion.div>
         {!md && (

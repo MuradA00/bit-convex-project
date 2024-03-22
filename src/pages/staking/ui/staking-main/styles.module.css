@@ -116,6 +116,37 @@
   font-weight: 700;
 }
 
+@media (max-width: 1200px) {
+  .wrapper {
+    margin: 0 !important;
+  }
+  .gridCols > div {
+    height: auto !important;
+  }
+  .selectBox {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: auto 1px auto;
+  }
+  .selectBox .divider {
+    width: fit-content !important;
+  }
+  .box {
+    padding: 2rem 1.25rem;
+  }
+  .btn {
+    height: 88px;
+    width: 100%;
+  }
+  .btn span {
+    font-size: 1.25rem;
+  }
+  .btn svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
 @media (max-width: 1400px) {
   .box {
     flex-direction: column;
@@ -124,8 +155,22 @@
   .box div {
     width: 100% !important;
     max-width: 100%;
+    margin-bottom: 0 !important;
   }
   .box p {
-    margin-bottom: 1rem !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+@media (max-width: 470px) {
+  .selectBox {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 12px !important;
+  }
+  .selectBox .divider {
+    width: 100% !important;
+    height: 1px !important;
+    background-color: rgba(255,255,255,.12);
   }
 }

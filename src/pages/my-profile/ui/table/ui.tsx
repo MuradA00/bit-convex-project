@@ -14,6 +14,9 @@ import {
 } from "@/shared/ui";
 import { Link } from "atomic-router-react";
 import { routes } from "@/shared/routing";
+import { useResize } from "@/hooks/useResize";
+import downloadIcon from '@/../public/assets/downloadIcon.svg';
+import withdrawIcon from '@/../public/assets/exportIcon.svg';
 
 type SortingLabel = 'Coin' | 'Plane' | 'Expires' | 'Realtime profit' | 'Invested';
 type SortingDirection = 'ASC' | 'DESC';
@@ -73,6 +76,7 @@ const COINS = [
 
 ]
 export const TableProfile = () => {
+  const {isAdaptive: laptop} = useResize(1200);
   const [sortingLabel, setSortingLabel] = useState<SortingLabel>('Coin');
   const [sortingDirection, setSortingDirection] = useState<SortingDirection>('ASC');
   const onTableHeadSortLabelClick = useCallback((label: SortingLabel) => {
@@ -106,39 +110,44 @@ export const TableProfile = () => {
       return (
         <Table.Tr key={coin.name}>
 
-          <Table.Td  w={440}   className={classes.tbodyTdWithIcon}>
+          <Table.Td className={classes.tbodyTdWithIcon}>
             <Group gap={rem(8)} px={12}>
               {coin.icon}
-              <Text c="white" className={classes.text} >{coin.name}</Text>
+              <Text c="white" className={classes.text}>{coin.name}</Text>
               <Text  ff={'ProximaNova'} className={classes.pill}>
                 {coin.short_name}
               </Text>
             </Group>
           </Table.Td>
-          <Table.Td  w={240}>
+          <Table.Td w={240}>
             <Text c="white" variant="text-3" span>{coin.Balance}</Text>
           </Table.Td>
-          <Table.Td  w={240}>
+          <Table.Td w={240}>
             <Text c="white" variant="text-3" span>{coin.Equivalent}</Text>
           </Table.Td>
-          <Table.Td  w={240}>
-            <Link to={routes.deposit} params={{coin: coin.short_name}} className={classes.tableLink}>Deposit</Link>
+          <Table.Td w={240}>
+            <Link to={routes.deposit} params={{coin: coin.short_name}} className={classes.tableLink}>
+              {laptop ? <img src={downloadIcon} alt="" /> :'Deposit'}
+            </Link>
           </Table.Td>
           <Table.Td  w={240}>
-            <Link to={routes.withdraw} params={{coin: coin.short_name}} className={classes.tableLink}>Withdraw</Link>
+            <Link to={routes.withdraw} params={{coin: coin.short_name}} className={classes.tableLink}>
+              {laptop ? <img src={withdrawIcon} alt="" /> : 'Withdraw'}
+            </Link>
           </Table.Td>
         </Table.Tr>
       );
     });
-  }, []);
+  }, [laptop]);
   return (
-    <Box my={rem(64)}>
+    <Box my={{0: 32, md: 64}}>
       <Text className={classes.title}>
         My Coins
       </Text>
-      <Box>
+      <Box className={classes.scrollContainer}>
         <Stack className={classes.box} gap={0}>
           <Flex
+            className={classes.boxHeader}
             gap={rem(32)}
             align={'center'}
             mb={rem('32px')}
@@ -163,24 +172,26 @@ export const TableProfile = () => {
           </Flex>
 
           <Divider size="xs" classNames={{ root: classes.ratesDividerRoot }} />
-          <Table classNames={{tr: classes.tableTr, td: classes.tableTd}} verticalSpacing={rem('16px')} withRowBorders={true}>
-            <Table.Thead classNames={{thead: classes.tableHead}}>
-              <Table.Tr>
-                {headers}
-              </Table.Tr>
-            </Table.Thead>
-            <Table.Tbody classNames={{tbody: classes.tableBody}}>
-              {tableCoins}
-            </Table.Tbody>
-          </Table>
-          <Divider size="xs" classNames={{ root: classes.ratesDividerRoot }} mt={rem('32px')} />
+          <div className={classes.tableContainer}>
+            <Table classNames={{tr: classes.tableTr, td: classes.tableTd}} verticalSpacing={rem('16px')} withRowBorders={true}>
+              <Table.Thead classNames={{thead: classes.tableHead}}>
+                <Table.Tr>
+                  {headers}
+                </Table.Tr>
+              </Table.Thead>
+              <Table.Tbody classNames={{tbody: classes.tableBody}}>
+                {tableCoins}
+              </Table.Tbody>
+            </Table>
+          </div>
+          <Divider size="xs" classNames={{ root: classes.ratesDividerRoot }} mt={'clamp(1.5rem, 2vw, 2rem)'} />
 
           <Group justify={"space-between"} mt={rem('32px')}>
             <Text variant="text-4" className={classes.greyText}>
               1-20 of 9,383 assets
             </Text>
             <Pagination total={20} defaultValue={1}>
-              <Group gap={rem("8px")} justify="center">
+              <Group gap={rem("0px")} justify="center">
                 <Pagination.Previous icon={PreviousIcon} />
                 <Pagination.Items />
                 <Pagination.Next icon={NextIcon} />

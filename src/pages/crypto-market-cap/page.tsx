@@ -44,8 +44,8 @@ export function Page() {
       <Stack gap={rem("32px")} className={classes.contentWrapper}>
         <Container>
          <Stack gap={rem("32px")}>
-          <Stack gap={rem("32px")}>
-            <Group>
+          <Stack gap={'clamp(1rem, 2vw,2rem)'}>
+            <Group className={classes.headerRow}>
               <Flex justify="center" align="center" className={classes.iconWrapper}>
                 <img draggable="false" src={`${import.meta.env.BASE_URL}assets/crypto-market-cap-icon.png`} alt="privacyNotice" />
               </Flex>
@@ -62,23 +62,23 @@ export function Page() {
             </Text>
           </Stack>
 
-          <Grid gutter={{0: 12, md: 32}}>
-            <Grid.Col span={{0: 6, md: 3}}>
+          <Grid className={classes.gridCols} gutter={{0: 12, md: 32}}>
+            <Grid.Col className={classes.gridColsItem} span={{0: 6, md: 3}}>
               <TopRate icon={<BitcoinIcon />} name="Bitcoin" subTitle="TOP VOL" price={44.034} percent={+5.00432} />
             </Grid.Col>
-            <Grid.Col span={{0: 6, md: 3}}>
+            <Grid.Col className={classes.gridColsItem} span={{0: 6, md: 3}}>
               <TopRate icon={<CardanoIcon />} name="Cardano" subTitle="TOP NEW" price={243.2} percent={+79.22} />
             </Grid.Col>
-            <Grid.Col span={{0: 6, md: 3}}>
+            <Grid.Col className={classes.gridColsItem} span={{0: 6, md: 3}}>
               <TopRate icon={<PolygonIcon />} name="Polygon" subTitle="TOP GAINER" price={553.3} percent={+12.3} />
             </Grid.Col>
-            <Grid.Col span={{0: 6, md: 3}}>
+            <Grid.Col className={classes.gridColsItem} span={{0: 6, md: 3}}>
               <TopRate icon={<PolkadotIcon />} name="Polkadot" subTitle="LOW 24h" price={24.2} percent={-24.7} /></Grid.Col>
           </Grid>
 
           <Stack gap={rem("32px")} className={classes.ratesTableWrapper}>
-            <Group justify={"space-between"}>
-              <Group>
+            <Group justify={"space-between"} className={classes.tableHeader}>
+              <Group className={classes.buttonFlex}>
                 <Button size="xl" variant="outline" className={classes.ratesButtonRootActive} classNames={{ root: classes.ratesButtonRoot, label: classes.ratesButtonLabel }}>
                   Top Gainers
                 </Button>

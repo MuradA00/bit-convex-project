@@ -12,9 +12,7 @@ import {
   rem,
   Image,
 } from "@mantine/core";
-
 import { Container, Footer, Header, NextIcon, PreviousIcon, ShowRowsCount, Wrapper } from "@/shared/ui";
-
 import classes from "./styles.module.css";
 import { CoinsTable } from "./ui/coins-table/ui";
 
@@ -48,7 +46,7 @@ export function Page() {
               trading pairs based on specific criteria, such as trading volume, price changes, market capitalization, or other metrics.
             </Text>
           </Stack>
-          <Stack gap={rem("32px")} className={classes.ratesTableWrapper}>
+          <Stack gap={'clamp(12px, 1vw, 1rem)'} className={classes.ratesTableWrapper}>
             <Group justify={"flex-start"}>
               <Button size="xl" variant="outline" className={classes.ratesButtonRootActive} classNames={{ root: classes.ratesButtonRoot, label: classes.ratesButtonLabel }}>
                 General

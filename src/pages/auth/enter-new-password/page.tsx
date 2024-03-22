@@ -1,8 +1,6 @@
 import { Button, Group, Image, PasswordInput, Stack, Text, Title, rem } from "@mantine/core";
-import { useUnit } from "effector-react";
 import { Header, HidePasswordIcon, ShowPasswordIcon, Wrapper } from "@/shared/ui";
 import { Footer } from "../components/Footer/Footer";
-import { confirmClicked } from "./model";
 import classes from "./styles.module.css";
 
 const ResetIcon = () => {
@@ -19,11 +17,9 @@ const ResetIcon = () => {
 };
 
 export const Page = () => {
-  const handleConfirmClick = useUnit(confirmClicked);
-
   const onContinue = (e: React.MouseEvent) => {
     e.preventDefault();
-    handleConfirmClick();
+    window.location.href = '/#/auth/sign-in-by-email';
   };
 
   return (

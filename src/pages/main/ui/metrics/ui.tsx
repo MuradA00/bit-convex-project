@@ -9,7 +9,7 @@ export const Metrics = () => {
       <Container>
         <Stack gap={'clamp(1.5rem, 4vw, 4rem)'}>
           <Stack style={{
-            gap: 'clamp(1rem,2vw, 2rem)',
+            gap: 'clamp(1rem, 2vw, 2rem)',
           }} align="center">
             <Title ta={'center'} order={2} className={classes.metricsTitle} fz={{0: 40, md: 54}}>
               Unrivaled Exchange
@@ -193,7 +193,7 @@ export const Metrics = () => {
                     </Text>
                   </Group>
                   <Title c="white" order={1} fz={{0: 48, md: 79}}>
-                    <span style={{ fontSize: "32px", lineHeight: "32px" }}></span>$91M<span style={{ fontSize: "60px", lineHeight: "60px" }}>+</span>
+                    <span style={{ fontSize: "32px", lineHeight: "32px" }}>$</span>91M<span style={{ fontSize: "60px", lineHeight: "60px" }}>+</span>
                   </Title>
                 </Stack>
               </motion.div>

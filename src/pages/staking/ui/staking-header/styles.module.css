@@ -101,7 +101,17 @@
   .box {
     padding: 1.5rem;
   }
+  .inner p {
+    line-height: 100%;
+  }
   .box img {
     display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .coinsText {
+    font-size: 14px;
+    line-height: 100%;
   }
 }

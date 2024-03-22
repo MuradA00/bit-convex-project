@@ -16,7 +16,7 @@ export const Promocode = () => {
     <>
       <Flex className={classes.box} justify={"space-between"} mt={rem(32)}>
         <Box w={"300px"}>
-          <Stack gap={rem("16px")}>
+          <Stack className={classes.grid} gap={rem("16px")}>
             <div className={classes.boxWrapper}>
               <Flex align={"center"} justify={"space-between"} className={classes.boxRed}>
                 <Stack gap={8}>

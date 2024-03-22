@@ -18,7 +18,7 @@ export const StakingHeader = () => {
   return (
     <Stack className={classes.wrapper}>
       <Flex className={classes.mainFlex} gap={rem('48px')} justify={'space-between'}>
-        <Stack gap={rem('32px')}  >
+        <Stack gap={'clamp(1rem, 2vw, 2rem)'}  >
           <Title order={1} w={{0: '100%', md: 636}} className={classes.title}>
             <Text span className={classes.titleColoredPart}>Earn your crypto</Text>
             <Text c='white' span className={classes.title} >
@@ -26,7 +26,7 @@ export const StakingHeader = () => {
               in a trusted space
             </Text>
           </Title>
-          <Flex gap={rem('16px')}>
+          <Flex align={'center'} gap={rem('16px')}>
             <Box>
               <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/coins.png`} alt="coins" className={classes.coins}/>
             </Box>

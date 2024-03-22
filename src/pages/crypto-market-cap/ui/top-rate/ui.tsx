@@ -1,10 +1,8 @@
 import { Divider, Group, Pill, Stack, Text, Title, rem } from "@mantine/core";
 import React, { useMemo } from "react";
 import { P, match } from "ts-pattern";
-
 import { randomChartData } from "@/shared/lib/random-chart-data";
 import { RateChart, RateType } from "@/shared/ui";
-
 import classes from "./styles.module.css";
 
 interface TopRateProps {
@@ -50,7 +48,7 @@ export const TopRate = ({ icon, name, price, subTitle, percent }: TopRateProps) 
 
         <Divider orientation="vertical" classNames={{ root: classes.dividerRoot }} />
 
-        <Stack gap={rem("4px")}>
+        <Stack gap={rem("4px")} className={classes.topRateFooter}>
           <Title c="white" order={4} fz={20}>
             ${price}
           </Title>

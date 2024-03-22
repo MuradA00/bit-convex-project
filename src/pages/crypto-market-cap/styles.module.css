@@ -50,7 +50,7 @@
 
 .content-wrapper {
   flex: 1;
-  padding: clamp(2rem, 4vw, 4rem) 0;
+  padding: clamp(1.75rem, 4vw, 4rem) 0;
   position: relative;
 
 }
@@ -203,3 +203,74 @@
   @mixin text-4-full var(--color-grey);
   @mixin transition;
 }
+
+@media (max-width: 1440px) {
+  .rates-table-wrapper {
+    padding: 2rem 1.25rem;
+  }
+  .rates-table-wrapper > div:nth-child(2) {
+    overflow-x: scroll;
+  }
+  .rates-table-wrapper > div > table {
+    min-width: 440px;
+  }
+  .categories-wrapper {
+    grid-gap: 12px;
+    padding-top: 1.5rem;
+  }
+  .category-button-wrapper {
+    padding: 0 0.75rem;
+    height: 42px;
+  }
+  .category-button-wrapper button {
+    font-size: 14px;
+  }
+  .table-head th {
+    display: none;
+  }
+  .tableHeader > div {
+    width: 100%;
+  }
+  .button-flex {
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,.12);
+    grid-gap: 0.75rem;
+  }
+  .button-flex button {
+    height: 40px;
+  }
+  .button-flex button span {
+    font-size: 0.875rem;
+  }
+  .rates-table-wrapper > div:first-child {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 900px) {
+  .icon-wrapper {
+    padding: 0;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 4px;
+  }
+  .header-row {
+    grid-gap: 8px;
+  }
+  .icon-wrapper img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .gridCols > div {
+    display: flex;
+    flex-direction: column;
+  }
+  .gridColsItem {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+

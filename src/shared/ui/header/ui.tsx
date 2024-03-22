@@ -175,7 +175,9 @@ export const Header = () => {
       </Link>
     );
   });
-
+  const handleDropdownClick = (index: number) => {
+    index === activeHiddenIndex ? setActiveHiddenIndex(undefined) : setActiveHiddenIndex(index);
+  }
   return (
     md ? (
       <>
@@ -213,7 +215,7 @@ export const Header = () => {
                   {link.links ? (
                     <div>
                       <button
-                        onClick={() => setActiveHiddenIndex(linkIndex)}
+                        onClick={() => handleDropdownClick(linkIndex)}
                         style={{
                           display: 'flex',
                           alignItems: 'center',
@@ -248,6 +250,7 @@ export const Header = () => {
                           style={{
                             paddingTop: linkIndex === activeHiddenIndex ? '16px' : '0px',
                             display: 'flex',
+                            transition: '300ms ease',
                             flexDirection: 'column',
                             gap: 16,
                             minHeight: 0,

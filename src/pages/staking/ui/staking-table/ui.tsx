@@ -21,7 +21,7 @@ const HEADERS  = [
     sortable: true
   },
   {
-    label: 'Realtime profit',
+    label: 'RT profit',
     sortable: true
   },
   {
@@ -151,16 +151,18 @@ export const StakingTable = () => {
           </Flex>
 
           <Divider size="xs" classNames={{ root: classes.ratesDividerRoot }} />
-          <Table classNames={{tr: classes.tableTr, td: classes.tableTd}} verticalSpacing={rem('16px')} withRowBorders={true}>
-            <Table.Thead classNames={{thead: classes.tableHead}}>
-              <Table.Tr>
-                {headers}
-              </Table.Tr>
-            </Table.Thead>
-            <Table.Tbody classNames={{tbody: classes.tableBody}}>
-              {tableCoins}
-            </Table.Tbody>
-          </Table>
+          <div className={classes.tableContainer}>
+            <Table classNames={{tr: classes.tableTr, td: classes.tableTd}} verticalSpacing={rem('16px')} withRowBorders={true}>
+              <Table.Thead classNames={{thead: classes.tableHead}}>
+                <Table.Tr>
+                  {headers}
+                </Table.Tr>
+              </Table.Thead>
+              <Table.Tbody classNames={{tbody: classes.tableBody}}>
+                {tableCoins}
+              </Table.Tbody>
+            </Table>
+          </div>
           <Divider size="xs" classNames={{ root: classes.ratesDividerRoot }} mt={rem('32px')} />
 
           <Group justify={"space-between"} mt={rem('32px')}>
@@ -168,7 +170,7 @@ export const StakingTable = () => {
               1-20 of 9,383 assets
             </Text>
             <Pagination total={20} defaultValue={1}>
-              <Group gap={rem("8px")} justify="center">
+              <Group gap={0} justify="center">
                 <Pagination.Previous icon={PreviousIcon} />
                 <Pagination.Items />
                 <Pagination.Next icon={NextIcon} />

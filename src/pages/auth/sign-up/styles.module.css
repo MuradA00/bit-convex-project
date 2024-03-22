@@ -103,6 +103,13 @@
   .form {
     min-width: auto;
   }
+  .notification svg {
+    width: 14px !important;
+  }
+  .form-light-left,
+  .form-light-right {
+    opacity: .5;
+  }
   .notification p {
       font-size: 14px;
   }

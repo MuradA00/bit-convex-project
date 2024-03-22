@@ -46,7 +46,7 @@ export const Page = () => {
 
         <Stack align={"center"} gap={'clamp(1.5rem, 3vw, 3rem)'} className={classes.formWrapper}>
           <Stack gap={'clamp(1rem, 1.75vw, 28px)'}>
-            <Title c="white" order={2} fz={{0: 40, md: 54}}>
+            <Title ta={{0: 'center', md: 'left'}} c="white" order={2} fz={{0: 40, md: 54}}>
               Enter security code
             </Title>
             <Text ta={"center"} fz={{0: 16, md: 20}} color="white" className={classes.greyText}>

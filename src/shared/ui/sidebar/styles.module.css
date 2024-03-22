@@ -1,7 +1,7 @@
 @import url("@/app/styles/mixin.css");
 
 .wrapper {
-  padding: rem(96px) 0;
+  padding: var(--adaptive-section-py) 0;
 }
 .box {
   min-width: 365px;
@@ -99,4 +99,10 @@
 
 .contentWrapper {
   flex: 1;
+}
+
+@media (max-width: 1400px) {
+  .box {
+    display: none;
+  }
 }

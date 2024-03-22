@@ -1,7 +1,6 @@
 import { Container, Divider, Flex, Group, SimpleGrid, Stack, Text, rem } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import clsx from "clsx";
-
 import classes from "./styles.module.css";
 
 const data = [
@@ -34,10 +33,10 @@ export const StakingCalculate = () => {
         </Group>
         {matches ? <Divider className={classes.divider} orientation={"vertical"} size={"1px"} /> : <></>}
         <Container p={0} m={0}>
-          <SimpleGrid spacing={rem("46px")} cols={{ base: 2, md: 2 }}>
+          <SimpleGrid className={classes.grid} spacing={rem("46px")} cols={{ base: 2, md: 2 }}>
             {data.map((item) => (
               <Group justify="space-between" gap={rem("30px")} wrap={"nowrap"}>
-                <Stack gap={rem("4px")} pr={20} w={130}>
+                <Stack gap={rem("4px")} pr={{0: 0, md: 20}} w={130}>
                   <Text c={"white"} className={classes.value}>
                     {item.title}
                   </Text>

@@ -149,10 +149,10 @@ export const StakingMain = () => {
           matches ? <Divider   className={classes.divider} orientation={'vertical'} size={'1px'} /> : <></>
         }
         <Container p={0} m={0} >
-          <Title className={classes.staking}   mb={rem('32px')} order={3}  >
+          <Title className={classes.staking} mb={rem('32px')} order={3}  >
             Select a staking plan
           </Title>
-          <SimpleGrid w={{0: '100%', md: '727px'}} spacing={rem('16px')} cols={{ base:2, md:3}}>
+          <SimpleGrid className={classes.gridCols} w={{0: '100%', md: '727px'}} spacing={rem('16px')} cols={{ base:2, md:3}}>
             {
               data.map((item,index) =>
                   <Box w={rem(231)} h={rem(93)} onClick={() => setPlan(index)} key={item.perDay} className={clsx(index === plan && classes.selectedBoxBg)}>

@@ -58,8 +58,9 @@
     min-width: auto !important;
   }
   .content-wrapper {
-    padding: 64px 1rem;
+    padding: 2rem 1rem;
     align-items: center;
+    min-height: 500px;
   }
   .btn span {
     font-size: 1.125rem;

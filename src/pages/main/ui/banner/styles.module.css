@@ -1,6 +1,6 @@
 .banner-wrapper {
   flex: 1;
-  padding: clamp(28px, 6vw, 96px) 0;
+  padding: clamp(28px, 60px, 96px) 0;
   position: relative;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -33,11 +33,12 @@
 .banner-button {
   z-index: 9;
   position: relative;
+  padding: 0 2rem;
 }
 
 .banner-right-side {
   flex-shrink: 0;
-  max-width: 662px;
+  max-width: 530px;
   img {
     width: 100%;
   }

@@ -55,3 +55,9 @@
     --text-color: var(--color-grey);
   }
 }
+
+@media (max-width: 1400px) {
+  .show-filter-wrapper {
+    display: none;
+  }
+}
