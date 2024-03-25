@@ -265,12 +265,19 @@
 
 @media (max-width: 470px) {
   .gridCols > div {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
   .gridColsItem {
-    width: 100%;
+    --col-width: 100%;
     max-width: 100%;
   }
+  .gridColsItem h4 {
+    font-size: 12px !important;
+  }
+  .gridColsItem p {
+    font-size: 12px !important;
+  }
+
 }
 

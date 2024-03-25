@@ -6,7 +6,7 @@ import { routes } from "@/shared/routing";
 import { Header, HidePasswordIcon, ShowPasswordIcon, Wrapper } from "@/shared/ui";
 import { Footer } from "../components/Footer/Footer";
 import classes from "./styles.module.css";
-
+  
 const StarIcon = () => {
   return (
     <svg width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">

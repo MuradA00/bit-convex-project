@@ -207,7 +207,7 @@ export const Header = () => {
               <img src={closeIcon} alt="closeIcon" />
             </button>
           </div>
-        <div className="no-scroll" style={{flexGrow: 1, display: 'flex', flexDirection: 'column', overflowY: 'scroll', width: 'calc(100% - 2px)'}}>
+        <div className="no-scroll" style={{flexGrow: 1, display: 'flex', flexDirection: 'column', overflowY: 'scroll', overflowX: 'hidden', width: 'calc(100% - 2px)'}}>
         <div style={{flex: '1'}}>
             <ul className="mobMenuList">
               {LINKS.map((link, linkIndex) => (

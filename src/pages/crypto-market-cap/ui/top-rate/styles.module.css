@@ -80,6 +80,27 @@
   }
 }
 
+@media (max-width: 470px) {
+  .top-rate-header {
+    padding: 12px 12px 0 12px !important;
+  }
+  .top-rate-chart-wrapper {
+    height: auto !important;
+  }
+  .top-rate-chart-wrapper > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 60px !important;
+  }
+  .top-rate-sub-title {
+    padding: 2px 4px;
+  }
+  .icon-wrap {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
 .zero {
   color: var(--color-blue)
 }

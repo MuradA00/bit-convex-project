@@ -33,6 +33,7 @@
 }
 
 .dropdown-divider-root {
+  border-color: rgba(255, 255, 255, 0.12);
   @mixin light {
     --_divider-color: rgba(255, 255, 255, 0.12);
   }
@@ -77,9 +78,9 @@
   --_popover-bg: var(--color-black) !important;
 
   color: var(--color-white);
-  border: rem(1) solid rgb(255 255 255 / 12%) !important;
+  border: 1px solid rgb(255 255 255 / 12%) !important;
   padding: rem(31) !important;
-  background: var(--color-black);
+  background: var(--color-black) !important;
   width: 335px !important;
 }
 

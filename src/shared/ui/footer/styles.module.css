@@ -34,9 +34,6 @@
   .footer-grid > div {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-
-@media (max-width: 48em) {
   .footer-grid > div > div {
     text-align: center
   }

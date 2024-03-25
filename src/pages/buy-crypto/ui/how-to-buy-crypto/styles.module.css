@@ -113,7 +113,7 @@
     flex-direction: column;
   }
   .grid-item {
-    min-height: 200px;
+    min-height: 160px;
     padding: 1.5rem;
   }
 }

@@ -49,7 +49,7 @@ export function Page() {
               <Flex justify="center" align="center" className={classes.iconWrapper}>
                 <img draggable="false" src={`${import.meta.env.BASE_URL}assets/crypto-market-cap-icon.png`} alt="privacyNotice" />
               </Flex>
-              <Title c="white" order={2} fz={{0: 40, md: 54}}>
+              <Title c="white" order={2} fz={{0: 28, md: 54}}>
                 Crypto Market Cap
               </Title>
             </Group>
@@ -62,7 +62,7 @@ export function Page() {
             </Text>
           </Stack>
 
-          <Grid className={classes.gridCols} gutter={{0: 12, md: 32}}>
+          <Grid className={classes.gridCols} gutter={{0: 8, md: 32}}>
             <Grid.Col className={classes.gridColsItem} span={{0: 6, md: 3}}>
               <TopRate icon={<BitcoinIcon />} name="Bitcoin" subTitle="TOP VOL" price={44.034} percent={+5.00432} />
             </Grid.Col>

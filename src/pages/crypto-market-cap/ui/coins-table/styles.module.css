@@ -132,7 +132,7 @@
   width: rem(100);
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1040px) {
   .table-head th:first-child {
     display: none;
   }

@@ -13,6 +13,9 @@
   line-height: rem(64px);
   font-weight: 600;
 }
+.table-td > div {
+  flex-wrap: nowrap;
+}
 .table-tr {
   border: none;
 }
@@ -210,6 +213,9 @@
   .table-td:first-child {
     width: 200px;
   }
+  .table-td:first-child > div {
+    flex-wrap: nowrap;
+  }
   .box-header {
     display: flex;
     grid-gap: 1rem !important;
@@ -238,8 +244,5 @@
 @media (max-width: 440px) {
   .box {
     padding: 1.5rem 0.75rem;
-  }
-  .table-td svg {
-    display: none;
   }
 }

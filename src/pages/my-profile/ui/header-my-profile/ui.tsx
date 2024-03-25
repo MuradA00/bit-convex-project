@@ -36,7 +36,23 @@ export const HeaderMyProfile = () => {
                 </Text>
                 <Box className={classes.hide}>
                   {
-                    isHide ? <CloseEyeIcon  width="24" height="24" onClick={() => showValue()} /> :  <Flex><EyeIcon  width="24" height="24" onClick={() => hideValue()} /></Flex>
+                    isHide ?
+                      <Box
+                        onClick={() => showValue()}
+                      >
+                        <CloseEyeIcon
+                          width="24"
+                          height="24"
+                        />
+                      </Box> :
+                    <Flex
+                      onClick={() => hideValue()}
+                    >
+                      <EyeIcon
+                        width="24"
+                        height="24"
+                      />
+                    </Flex>
                   }
                 </Box>
               </Flex>
