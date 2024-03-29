@@ -3,6 +3,11 @@
 .root {
 }
 
+.control:first-child,
+.control:last-child {
+  border: 1px solid var(--color-blue);
+}
+
 .control {
   --_control-color: var(--color-grey);
 

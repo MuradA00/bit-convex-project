@@ -152,7 +152,7 @@
     flex-direction: column;
     gap: 56px;
   }
-  .box div {
+  .box div:not([role="presentation"]) {
     width: 100% !important;
     max-width: 100%;
     margin-bottom: 0 !important;

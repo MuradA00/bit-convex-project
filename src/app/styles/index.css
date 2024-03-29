@@ -206,16 +206,20 @@ h6 {
   background-color: var(--color-black-bg);
 }
 
-* {
-  &::-webkit-scrollbar {
-    width: 2px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: var(--color-grey);
-  }
-  &::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.12);
-  }
+*::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+*::-webkit-scrollbar-track {
+  background: #27272a !important;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #6c7080 !important;
+}
+
+.mantine-Popover-dropdown {
+  background-color: #0c0d10 !important;
 }
 
 .text-grey {

@@ -30,7 +30,7 @@
   }
 }
 .dropdown {
-  background: var(--color-black);
+  background-color: var(--color-black) !important;
   border: var(--border1);
 }
 .option {

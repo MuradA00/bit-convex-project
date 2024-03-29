@@ -16,6 +16,8 @@
 }
 
 .footer-grid {
+  flex: 1;
+  max-width: 850px;
   --grid-gutter: 0 !important;
   overflow: initial;
   margin: 0;
@@ -77,5 +79,11 @@
         fill: var(--color-blue);
       }
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer-grid {
+    max-width: 100%;
   }
 }

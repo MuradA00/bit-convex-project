@@ -47,7 +47,9 @@ export const StakingHeader = () => {
               </Text>
               <Box className={classes.hide}>
                 {
-                  isHide ? <CloseEyeIcon  width="35" height="35" onClick={() => showValue()} /> :  <Flex><EyeIcon  width="48" height="49" onClick={() => hideValue()} /></Flex>
+                  isHide ? <Box onClick={() => showValue()}>
+                    <CloseEyeIcon  width="35" height="35" />
+                  </Box>:  <Flex onClick={() => hideValue()}><EyeIcon  width="48" height="49" /></Flex>
                 }
               </Box>
             </Flex>

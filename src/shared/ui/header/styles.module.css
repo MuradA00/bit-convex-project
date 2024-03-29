@@ -1,7 +1,7 @@
 @import url("@/app/styles/mixin.css");
 
 .header {
-  max-width: calc(1540px + 2rem);
+  max-width: calc(1340px + 2rem);
   width: 100%;
   padding: 0 1rem;
   margin: rem(32) auto;

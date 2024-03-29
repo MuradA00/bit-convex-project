@@ -67,7 +67,7 @@
   --divider-color:var(--color-blue) !important;
 }
 .grid {
-  display: block;
+  display: none;
 }
 @media (max-width: 1200px) {
   .adaptive > div{
