@@ -9,7 +9,6 @@ import { theme } from "@/app/theme";
 import { Pages } from "@/pages";
 
 import { router } from "@/shared/routing";
-import { useEffect } from "react";
 
 
 const helmetDefaultParams = {
@@ -19,16 +18,6 @@ const helmetDefaultParams = {
 };
 
 export const Application = () => {
-  useEffect(() => {
-    const links = document.querySelectorAll('a');
-
-    links.forEach(link => {
-      link.addEventListener('click', () => {
-        window.scrollTo(0,0);
-        console.log(link);
-      })
-    })
-  }, []);
     return (
         <HelmetProvider>
           <MantineProvider theme={theme} withCssVariables={true}>

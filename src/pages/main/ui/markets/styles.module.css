@@ -7,6 +7,10 @@
   position: relative;
 }
 
+.market-short-name-wrapper {
+  background-color: #0C0D10;
+}
+
 .markets-see-all-markets-text {
   gap: rem(8);
   display: flex;
