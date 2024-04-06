@@ -15,7 +15,7 @@ export function Page() {
 
       <Header />
       <Container>
-        <Sidebar gap={64}>
+        <Sidebar gap={'clamp(2rem, 4vw, 64px)'}>
           <SettingsBox />
         </Sidebar>
       </Container>

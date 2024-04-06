@@ -62,3 +62,9 @@
   @mixin text-2-craft-font;
   font-weight: 600;
 }
+
+@media (max-width: 1000px) {
+  .wrapper {
+    width: 100%;
+  }
+}

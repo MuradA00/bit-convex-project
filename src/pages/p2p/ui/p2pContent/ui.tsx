@@ -11,7 +11,7 @@ export const P2PContent = () => {
   return (
     <div className={classes.wrapper}>
       <PageHeader />
-      <Group gap={32} align="start">
+      <Group className={classes.flex} gap={32} align="start">
         <Filters setTab={setTab} />
         <Trade tabName={tab} />
       </Group>

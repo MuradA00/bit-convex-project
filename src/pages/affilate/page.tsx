@@ -16,7 +16,7 @@ export function Page() {
 
       <Header />
       <Container>
-        <Sidebar verticalPadding={64}>
+        <Sidebar verticalPadding={'clamp(2rem, 4vw, 4rem)'}>
           <AffiliateBox />
         </Sidebar>
       </Container>

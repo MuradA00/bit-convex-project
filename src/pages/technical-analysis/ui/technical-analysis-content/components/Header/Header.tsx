@@ -6,8 +6,8 @@ import classes from "./Header.module.css";
 
 export const Header = () => {
   return (
-    <Stack gap={32} w="80%">
-      <Group gap={16}>
+    <Stack className={classes.headerFlex} gap={32} w="80%">
+      <Group gap={'clamp(8px, 1vw, 1rem)'}>
         <div className={classes.iconWrapper}>
           <TechAnalysisIcon />
         </div>

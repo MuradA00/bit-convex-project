@@ -148,3 +148,30 @@
 .coin-th {
   min-width: rem(250);
 }
+
+@media (max-width: 1200px) {
+  .table-tr {
+    padding: 0 !important;
+  }
+  .table-tr th {
+    padding: 1rem 0 !important;
+  }
+  /* .table-head-sort-label svg, img {
+    width: 1rem !important;
+    height: 1rem !important;
+  } */
+  .table-tr th:first-child {
+    display: none;
+  }
+  .table-td:first-child {
+    display: none;
+  }
+  .table-td {
+    height: auto !important;
+    padding: 12px 0 !important;
+  }
+  /* .table-td svg, img {
+    width: 1.5rem;
+    height: 1.5rem;
+  } */
+}

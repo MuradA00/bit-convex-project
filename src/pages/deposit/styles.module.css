@@ -40,3 +40,9 @@
   position: absolute;
 }
 
+@media (max-width: 1200px) {
+  .wrapper {
+    grid-gap: 1rem;
+    flex-direction: column;
+  }
+}

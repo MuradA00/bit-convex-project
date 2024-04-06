@@ -185,3 +185,73 @@
 .greyText {
   color: var(--color-grey);
 }
+
+@media (max-width: 900px) {
+  .content-flex {
+    grid-gap: 1.5rem;
+    flex-direction: column;
+  }
+  .subTitle {
+    font-size: 1rem;
+  }
+  .title {
+    font-size: 40px;
+  }
+  .title span {
+    font-size: inherit;
+  }
+  .card-flex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cardWrapper {
+    min-height: 102px;
+    justify-content: center;
+  }
+  .copyRefContainer {
+    grid-gap: 8px;
+  }
+  .refRow {
+    grid-gap: 0.75rem;
+    flex-direction: column;
+  }
+  .copyRefTitle {
+    font-size: 14px;
+  }
+  .copyRefContainer {
+    width: 100%;
+  }
+  .box {
+    padding: 2rem 1.25rem;
+  }
+  .table-header {
+    grid-gap: 1rem;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 1.5rem !important;
+  }
+  .table-header > * {
+    width: 100%;
+  }
+  .searchInputWrapper {
+    width: 100%;
+  }
+  .tableTh {
+    padding: 1rem 0;
+  }
+  .tableTh span {
+    font-size: 14px;
+  }
+  .tableTd {
+    padding: 12px 0;
+  }
+  .tableTd p {
+    font-size: 1rem !important;
+  }
+  table {
+    min-width: 440px;
+  }
+  .scroll-container {
+    overflow-x: scroll;
+  }
+}

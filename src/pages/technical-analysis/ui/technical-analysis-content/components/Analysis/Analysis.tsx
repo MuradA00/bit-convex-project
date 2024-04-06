@@ -21,11 +21,11 @@ export const Analysis = ({ currency, percents }: AnalysisProps) => {
   return (
     <div className={classes.analysisWrapper}>
       <Stack gap={0} align="center">
-        <Stack gap={16}>
+        <Stack className={classes.analysisHeader} gap={16}>
           <Text className={classes.analysisTitle}>
             Technical Analysis for <span>{currency}</span>
           </Text>
-          <Group justify="center">
+          <Group className={classes.periods} justify="center">
             {period.map((item) => (
               <button
                 key={item.value}

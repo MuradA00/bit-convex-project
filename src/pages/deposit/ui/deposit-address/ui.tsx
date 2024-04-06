@@ -11,7 +11,7 @@ export const DepositsAddress = () => {
   const combobox = useCombobox();
   return (
     <Stack gap={rem(32)} className={classes.wrapper}>
-      <Flex justify={"space-between"}>
+      <Flex className={classes.header} justify={"space-between"}>
         <Text className={classes.title}>Deposit Address</Text>
         <Combobox
           width={140}

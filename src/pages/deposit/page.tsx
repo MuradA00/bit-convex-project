@@ -21,7 +21,7 @@ export function Page() {
       <Header />
       <Container>
         <Sidebar>
-          <Flex gap={rem(32)}>
+          <Flex className={classes.wrapper} gap={rem(32)}>
             <DepositsBox height={799} coin={selectedDeposit} setCoin={setSelectedDeposit} />
             <DepositsAddress key={selectedDeposit} />
           </Flex>

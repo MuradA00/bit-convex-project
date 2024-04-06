@@ -60,7 +60,7 @@ const LINKS = [
     label: "Worker Panel",
   },
 ];
-export const Sidebar = ({ children, gap = 32, verticalPadding }: { children: ReactNode; gap?: number; verticalPadding?: number }) => {
+export const Sidebar = ({ children, gap = 32, verticalPadding }: { children: ReactNode; gap?: number | string; verticalPadding?: number | string }) => {
   return (
     <Box className={classes.wrapper} style={{ paddingTop: verticalPadding, paddingBottom: verticalPadding }}>
       <Flex gap={gap} align={'flex-start'}>

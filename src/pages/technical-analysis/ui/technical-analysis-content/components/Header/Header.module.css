@@ -1,4 +1,4 @@
-.iconWrapper {
+.icon-container {
   padding: 7px;
   border: var(--border1);
   border-radius: 8px;
@@ -16,4 +16,31 @@
   font-size: 20px;
   color: var(--color-grey);
   font-family: "ProximaNova";
+}
+@media (max-width: 1200px) {
+  .header-flex {
+    grid-gap: 1rem;
+    width: 100% !important;
+  }
+  .headerTitle {
+    font-size: 40px;
+  }
+  .icon-container {
+    padding: 0;
+    width: 3rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 4px;
+  }
+  .headerDescription {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .headerTitle {
+    font-size: 2rem;
+  }
 }

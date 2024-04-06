@@ -19,7 +19,7 @@ export function Page() {
       <Header />
       <Container>
         <Sidebar>
-          <Flex gap={rem(32)}>
+          <Flex className={classes.flexContainer} gap={rem(32)}>
             <DepositsBox height={694} />
             <TransferBox />
           </Flex>

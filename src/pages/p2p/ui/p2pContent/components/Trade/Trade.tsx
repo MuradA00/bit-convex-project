@@ -1,4 +1,4 @@
-import { Button, Group, Image, Pagination, Stack, Table, Text, rem } from "@mantine/core";
+import { Box, Button, Group, Image, Pagination, Stack, Table, Text, rem } from "@mantine/core";
 import clsx from "clsx";
 import { useMemo } from "react";
 
@@ -178,45 +178,47 @@ export const Trade = ({ tabName }: { tabName: string }) => {
   );
   return (
     <div className={classes.tableContainer}>
-      <Table classNames={{ thead: classes.tableHead, th: classes.tableTh, tr: classes.tableBodyTr, td: classes.tableTd }} withRowBorders={false}>
-        <Table.Thead>
-          <Table.Tr className={classes.tableHeaderTr}>
-            {header.map(({ title, key }) => (
-              <Table.Th key={key}>{title}</Table.Th>
-            ))}
-          </Table.Tr>
-        </Table.Thead>
-        <Table.Tbody>
-          {body.map(({ id, trader, payment, price, limits, action }) => (
-            <Table.Tr key={id}>
-              <Table.Td>
-                <Group gap={13} align="center">
-                  <div className={classes.imageWrapper}>
-                    <Image src={trader.img} alt="avatar" />
-                    <div className={clsx(classes.indicator, { [classes.online]: trader.status === "online" })} />
-                  </div>
-                  <Stack gap={4}>
-                    <Text className={clsx(classes.userName, { [classes.online]: trader.status === "online" })}>{trader.name}</Text>
-                    <Text className={classes.userStats}>{trader.userStats}</Text>
-                  </Stack>
-                </Group>
-              </Table.Td>
-              <Table.Td>
-                <Text className={clsx(classes.badge, classes.orange)}>{payment}</Text>
-              </Table.Td>
-              <Table.Td>
-                <Text className={classes.price}>{price}</Text>
-              </Table.Td>
-              <Table.Td>
-                <Text>{limits}</Text>
-              </Table.Td>
-              <Table.Td>
-                <Group justify="center">{action}</Group>
-              </Table.Td>
+      <Box>
+        <Table classNames={{ thead: classes.tableHead, th: classes.tableTh, tr: classes.tableBodyTr, td: classes.tableTd }} withRowBorders={false}>
+          <Table.Thead>
+            <Table.Tr className={classes.tableHeaderTr}>
+              {header.map(({ title, key }) => (
+                <Table.Th key={key}>{title}</Table.Th>
+              ))}
             </Table.Tr>
-          ))}
-        </Table.Tbody>
-      </Table>
+          </Table.Thead>
+          <Table.Tbody>
+            {body.map(({ id, trader, payment, price, limits, action }) => (
+              <Table.Tr key={id}>
+                <Table.Td>
+                  <Group gap={13} align="center">
+                    <div className={classes.imageWrapper}>
+                      <Image src={trader.img} alt="avatar" />
+                      <div className={clsx(classes.indicator, { [classes.online]: trader.status === "online" })} />
+                    </div>
+                    <Stack gap={4}>
+                      <Text className={clsx(classes.userName, { [classes.online]: trader.status === "online" })}>{trader.name}</Text>
+                      <Text className={classes.userStats}>{trader.userStats}</Text>
+                    </Stack>
+                  </Group>
+                </Table.Td>
+                <Table.Td>
+                  <Text className={clsx(classes.badge, classes.orange)}>{payment}</Text>
+                </Table.Td>
+                <Table.Td>
+                  <Text className={classes.price}>{price}</Text>
+                </Table.Td>
+                <Table.Td>
+                  <Text>{limits}</Text>
+                </Table.Td>
+                <Table.Td>
+                  <Group justify="center">{action}</Group>
+                </Table.Td>
+              </Table.Tr>
+            ))}
+          </Table.Tbody>
+        </Table>
+      </Box>
       <Group justify={"space-between"} mt={rem("32px")}>
         <Text variant="text-4" className={classes.paginationText}>
           1-20 of 9,383 assets

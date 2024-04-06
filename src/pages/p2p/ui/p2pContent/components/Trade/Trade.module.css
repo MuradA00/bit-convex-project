@@ -108,3 +108,7 @@
 .paginationText {
   color: var(--color-grey);
 }
+
+@media (max-width: 1200px) {
+
+}

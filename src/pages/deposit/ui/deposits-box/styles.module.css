@@ -57,3 +57,6 @@
   @mixin text-5;
   color: var(--color-white);
 }
+
+@media (max-width: 1200px) {
+}

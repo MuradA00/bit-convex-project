@@ -54,3 +54,28 @@
   line-height: 29px;
   color: var(--color-orange);
 }
+
+@media (max-width: 1400px) {
+  .text-red,
+  .text-orange {
+    font-size: 1.125rem;
+  }
+  .mainTitle {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .text-red,
+  .text-orange {
+    font-size: 1rem;
+  }
+  .box-red,
+  .box-orange {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+
+}

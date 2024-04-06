@@ -1,4 +1,4 @@
-import { Combobox, Divider, Flex, Group, Image, Pagination, Stack, Table, Text, TextInput, rem, useCombobox } from "@mantine/core";
+import { Box, Combobox, Divider, Flex, Group, Image, Pagination, Stack, Table, Text, TextInput, rem, useCombobox } from "@mantine/core";
 import clsx from "clsx";
 import { useCallback, useMemo, useState } from "react";
 
@@ -195,10 +195,10 @@ export const TransactionTable = () => {
   ));
 
   return (
-    <Stack gap={rem(32)}>
+    <Stack gap={rem(32)} className={classes.wrapper}>
       <Text className={classes.title}>Transaction history</Text>
       <Stack className={classes.box} gap={32}>
-        <Group justify="space-between" align={"center"}>
+        <Group className={classes.boxHeader} justify="space-between" align={"center"}>
           <TextInput
             h={51}
             classNames={{
@@ -230,26 +230,28 @@ export const TransactionTable = () => {
             </Combobox.Dropdown>
           </Combobox>
         </Group>
-        <Table
-          classNames={{ tr: classes.tableTr, td: classes.tableTd }}
-          horizontalSpacing={rem(24)}
-          verticalSpacing={rem("24px")}
-          withRowBorders={true}
-        >
-          <Table.Thead classNames={{ thead: classes.tableHead }}>
-            <Table.Tr>{headers}</Table.Tr>
-          </Table.Thead>
-          <Table.Tbody classNames={{ tbody: classes.tableBody }}>
-            {tableCoins ? (
-              tableCoins
-            ) : (
-              <Stack align={"center"} ml={323} my={137}>
-                <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/notes.png`} alt="notes" className={classes.img} />
-                <Text className={classes.noData}>No records found</Text>
-              </Stack>
-            )}
-          </Table.Tbody>
-        </Table>
+        <Box className={classes.tableWrapper}>
+          <Table
+            classNames={{ tr: classes.tableTr, td: classes.tableTd }}
+            horizontalSpacing={rem(24)}
+            verticalSpacing={rem("24px")}
+            withRowBorders={true}
+          >
+            <Table.Thead classNames={{ thead: classes.tableHead }}>
+              <Table.Tr>{headers}</Table.Tr>
+            </Table.Thead>
+            <Table.Tbody classNames={{ tbody: classes.tableBody }}>
+              {tableCoins ? (
+                tableCoins
+              ) : (
+                <Stack align={"center"} ml={323} my={137}>
+                  <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/notes.png`} alt="notes" className={classes.img} />
+                  <Text className={classes.noData}>No records found</Text>
+                </Stack>
+              )}
+            </Table.Tbody>
+          </Table>
+        </Box>
         <Divider size="xs" classNames={{ root: classes.ratesDividerRoot }} />
 
         <Group justify={"space-between"}>

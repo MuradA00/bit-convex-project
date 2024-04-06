@@ -1,4 +1,4 @@
-import { Button, Divider, Flex, Group, Pagination, Stack, Table, Text, TextInput, rem } from "@mantine/core";
+import { Box, Button, Divider, Flex, Group, Pagination, Stack, Table, Text, TextInput, rem } from "@mantine/core";
 import clsx from "clsx";
 import { useCallback, useState } from "react";
 
@@ -52,8 +52,8 @@ export const AffiliateBox = () => {
     [sortingDirection, sortingLabel],
   );
   return (
-    <Stack gap={rem(48)}>
-      <Group gap={rem(32)} wrap="nowrap">
+    <Stack gap={'clamp(2rem, 3vw, 48px)'}>
+      <Group gap={rem(32)} wrap="nowrap" className={classes.contentFlex}>
         <Stack gap={rem(16)}>
           <Text className={classes.title}>
             <Text component="span">Up to 40% Rebates</Text> with Our Referral Program
@@ -62,7 +62,7 @@ export const AffiliateBox = () => {
             If you want more, you can also join the alliance special plan to share the growth benefits of Bitconvex.
           </Text>
         </Stack>
-        <Stack gap={rem(16)} style={{ alignSelf: "stretch" }}>
+        <Stack className={classes.cardFlex} gap={rem(16)} style={{ alignSelf: "stretch" }}>
           <div className={classes.cardWrapper}>
             <ProfitIcon />
             <Group gap={rem(8)} wrap="nowrap">
@@ -79,7 +79,7 @@ export const AffiliateBox = () => {
           </div>
         </Stack>
       </Group>
-      <Group gap={rem(32)} wrap="nowrap">
+      <Group gap={rem(32)} className={classes.refRow} wrap="nowrap">
         <Stack gap={rem(16)} className={classes.copyRefContainer}>
           <Text className={classes.copyRefTitle}>Referral Link</Text>
           <div className={classes.copyRefWrapper}>
@@ -102,7 +102,7 @@ export const AffiliateBox = () => {
       <Divider opacity={"0.12"} color={"white"} />
 
       <Stack className={classes.box} gap={0}>
-        <Flex justify={"space-between"} align={"center"} mb={rem("32px")}>
+        <Flex className={classes.tableHeader} justify={"space-between"} align={"center"} mb={rem("32px")}>
           <Text className={classes.tableTitle}>Referral Overview</Text>
           <TextInput
             classNames={{
@@ -116,7 +116,8 @@ export const AffiliateBox = () => {
         </Flex>
 
         <Divider size="xs" classNames={{ root: classes.ratesDividerRoot }} />
-        <Table withRowBorders={false}>
+          <Box className={classes.scrollContainer}>
+          <Table withRowBorders={false}>
           <Table.Thead>
             <Table.Tr className={classes.tableHeaderTr}>
               <Table.Th className={classes.tableTh}>
@@ -169,6 +170,7 @@ export const AffiliateBox = () => {
             ))}
           </Table.Tbody>
         </Table>
+          </Box>
         <Divider size="xs" classNames={{ root: classes.ratesDividerRoot }} mt={rem("32px")} />
 
         <Group justify={"space-between"} mt={rem("32px")}>

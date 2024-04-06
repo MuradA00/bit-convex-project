@@ -36,3 +36,28 @@
     color: var(--color-blue);
   }
 }
+
+@media (max-width: 1200px) {
+  .analysisTitle {
+    font-size: 20px !important;
+  }
+  .analysisHeader {
+    font-size: 40px;
+  }
+  .analysisWrapper {
+    padding: 1.25rem;
+  }
+  .periodButton {
+    height: 24px;
+    padding: 0 12px;
+  }
+  .periods {
+    grid-gap: 8px;
+  }
+  .show-filter-wrapper {
+    display: none;
+  }
+  .header-title {
+    font-size: 40px;
+  }
+}

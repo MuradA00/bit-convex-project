@@ -52,7 +52,7 @@
 
 .content-wrapper {
   flex: 1;
-  padding: rem(64) 0;
+  padding: var(--adaptive-section-py) 0;
   position: relative;
 
 }
@@ -178,4 +178,51 @@
 .category-button {
   @mixin text-4-full var(--color-grey);
   @mixin transition;
+}
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: 40px !important;
+  }
+  .description {
+    font-size: 1rem;
+  }
+  .rates-table-wrapper {
+    padding: 2rem 1.25rem;
+  }
+  .table-container {
+    overflow-x: scroll;
+  }
+  .table-container > table {
+    max-width: 100%;
+    width: 100%;
+    min-width: 1040px;
+  }
+  .categories-wrapper {
+    grid-gap: 12px;
+    padding-top: 1.5rem;
+  }
+  .category-button-wrapper {
+    min-height: 44px;
+    padding: 0 14px;
+    height: auto;
+  }
+  .category-button {
+    font-size: 14px !important;
+  }
+  .rates-button-root {
+    padding: 0 1.25rem;
+    min-height: 40px;
+    height: auto;
+  }
+  .rates-button-label {
+    font-size: 0.875rem;
+  }
+  .icon-wrapper {
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+  }
 }

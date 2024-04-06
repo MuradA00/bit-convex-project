@@ -31,17 +31,17 @@ export function Page() {
 
           <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/light/market-screener/4.png`} alt="light-4" className={classes.lightFour}/>
           <Image draggable={false} src={`${import.meta.env.BASE_URL}assets/light/market-screener/5.png`} alt="light-5" className={classes.lightFive}/>
-          <Stack gap={rem("32px")}>
+          <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
             <Group>
               <Flex justify="center" align="center" className={classes.iconWrapper}>
                 <img draggable="false" src={`${import.meta.env.BASE_URL}assets/market-screener-icon.png`} alt="market-screener" />
               </Flex>
-              <Title c="white" order={2} fz={54}>
+              <Title className={classes.title} c="white" order={2} fz={54}>
                 Market Screener
               </Title>
             </Group>
 
-            <Text c="grey" variant="text-2">
+            <Text className={classes.description} c="grey" variant="text-2">
               Market screener on cryptocurrency exchanges is a tool that allows users to filter and sort through a wide range of cryptocurrency <br />
               trading pairs based on specific criteria, such as trading volume, price changes, market capitalization, or other metrics.
             </Text>
@@ -91,7 +91,9 @@ export function Page() {
                 <ShowRowsCount />
               </Group>
               <Divider size="xs" classNames={{ root: classes.ratesDividerRoot }} />
-              <CoinsTable />
+              <div className={classes.tableContainer}>
+                <CoinsTable />
+              </div>
             </Stack>
 
             <Divider size="xs" classNames={{ root: classes.ratesDividerRoot }} />

@@ -130,6 +130,7 @@
   .box {
     grid-gap: 1rem !important;
     padding: 1.25rem !important;
+    min-width: auto;
   }
   .avatar {
     width: 4rem;

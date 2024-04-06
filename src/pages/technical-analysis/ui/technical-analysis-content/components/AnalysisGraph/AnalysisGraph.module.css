@@ -99,3 +99,9 @@
     top: 109px;
   }
 }
+
+@media (max-width: 1200px) {
+  .analysisGraphSectorsContainer {
+    transform: scale(.75);
+  }
+}
