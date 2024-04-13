@@ -46,7 +46,7 @@ export const KycBox = () => {
   const [documentType, setDocumentType] = useState("Passport");
   return (
     <Stack gap={rem(32)}>
-      <Flex justify={"space-between"}>
+      <Flex justify={"space-between"} className={classes.headerFlex}>
         <Text className={classes.title}>KYC Verification</Text>
         <Box className={classes.boxWrapper}>
           <Flex align={"center"} justify={"space-between"} className={classes.boxRed}>
@@ -134,7 +134,7 @@ export const KycBox = () => {
               </Button>
             ))}
           </Group>
-          <Flex gap={rem(16)}>
+          <Flex gap={rem(16)} className={classes.columns}>
             <Stack>
               <Text className={classes.subTitle4}>Identity Document Front Side</Text>
               <Flex className={classes.selectBox}>

@@ -1,5 +1,5 @@
 .pageContainer {
-  padding: 96px 0;
+  padding: var(--adaptive-section-py) 0;
 }
 .chatTitle {
   color: white;
@@ -195,5 +195,25 @@
     path {
       fill: white;
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .chatTitle {
+    font-size: 40px;
+  }
+  .pageContainer {
+    grid-gap: 2rem ;
+  }
+  .chatItemContainer {
+    padding: .5rem 0;
+  }
+  .chatContainer {
+    grid-gap: 1rem;
+    flex-direction: column;
+    height: 100%;
+  }
+  .chatContainer > div {
+    width: 100%;
   }
 }

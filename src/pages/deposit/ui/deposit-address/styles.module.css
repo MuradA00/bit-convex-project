@@ -118,8 +118,12 @@
   .header {
     align-items: flex-start;
   }
-  .qrcodeContainer {
-
+  .copy .list-item {
+    max-width: 240px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   .header p {
     font-size: 1.75rem;

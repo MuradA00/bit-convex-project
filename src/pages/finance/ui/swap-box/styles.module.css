@@ -113,3 +113,29 @@
     display: none;
   }
 }
+
+@media (max-width: 1200px) {
+  .swap-box-wrapper {
+    width: 100%;
+    max-width: 500px;
+    margin: 2rem auto 0;
+  }
+  .swap-wrapper {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    height: 88px;
+  }
+  .btn span {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 384px) {
+  .swap-wrapper {
+    padding: 1.5rem 1rem !important;
+  }
+}

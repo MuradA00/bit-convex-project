@@ -178,7 +178,7 @@ export const Trade = ({ tabName }: { tabName: string }) => {
   );
   return (
     <div className={classes.tableContainer}>
-      <Box>
+      <Box className={classes.tableWrapper}>
         <Table classNames={{ thead: classes.tableHead, th: classes.tableTh, tr: classes.tableBodyTr, td: classes.tableTd }} withRowBorders={false}>
           <Table.Thead>
             <Table.Tr className={classes.tableHeaderTr}>

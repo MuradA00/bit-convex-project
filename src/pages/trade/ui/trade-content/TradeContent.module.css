@@ -1,4 +1,9 @@
 .wrapper {
   align-self: stretch;
-  max-height: 1134px;
+}
+
+@media (max-width: 1380px) {
+  .wrapper {
+    flex-direction: column;
+  }
 }

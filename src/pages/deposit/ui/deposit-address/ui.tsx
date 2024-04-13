@@ -3,10 +3,13 @@ import clsx from "clsx";
 import { useState } from "react";
 
 import { ArrowIcon } from "@/pages/deposit/ui";
+import copyIcon from "../../../../../public/assets/copyIcon.svg";
 
 import classes from "./styles.module.css";
+import { useMediaQuery } from "@mantine/hooks";
 
 export const DepositsAddress = () => {
+  const lg = useMediaQuery('(max-width: 1200px)')
   const [selectedItem, setSelectedItem] = useState<string | null>("BTC");
   const combobox = useCombobox();
   return (
@@ -60,9 +63,15 @@ export const DepositsAddress = () => {
       </Box>
       <Flex align={"center"} justify={"space-between"} className={classes.copy}>
         <Text className={classes.listItem}>bc1qhq3n0aauaavz555ty080v9frqj2ykv05f37wqn</Text>
-        <Button variant="radial-gradient" className={classes.btn}>
-          <Text className={classes.btnText}>Copy</Text>
-        </Button>
+        {!lg ? (
+          <Button variant="radial-gradient" className={classes.btn}>
+            <Text className={classes.btnText}>Copy</Text>
+          </Button>
+        ) : (
+          <button>
+            <img src={copyIcon} alt="" />
+          </button>
+        )}
       </Flex>
     </Stack>
   );

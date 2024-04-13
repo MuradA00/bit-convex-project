@@ -4,11 +4,12 @@ import classes from "./styles.module.css";
 
 export const SwapTitle = () => {
     return (
-      <Stack gap={rem("16px")} mt={rem(160)} align="center">
-        <Text c={'white'} fz={54} lh={'64px'} fw={600}>
+      <Stack gap={rem("16px")} mt={'clamp(28px, 10vw, 10rem)'} align="center">
+        <Text c={'white'} fz={'clamp(40px, 3.375vw, 54px)'} fw={600}>
           Fast swap
         </Text>
         <Flex
+          className={classes.subHeader}
           gap={rem('32px')}
         >
           <Flex gap={rem(8)}>

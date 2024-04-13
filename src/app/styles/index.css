@@ -243,6 +243,13 @@ h6 {
     background-position 2000ms ease-out;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
 div[style*="min-width: 100%"][style*="display: table"] {
   display: flex !important;
   height: 100%;

@@ -159,3 +159,43 @@
   width: 202px !important;
   height: 54px !important;
 }
+
+form .body {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 1400px) {
+  .body {
+    grid-gap: 1rem;
+  }
+  .rates-button-root span {
+    font-size: 14px !important;
+  }
+  .rates-button-root {
+    height: 40px;
+    padding: 0 1.25rem;
+  }
+  .columns {
+    flex-direction: column;
+  }
+  .select-box {
+    width: 100%;
+    justify-content: center;
+  }
+  .title {
+    font-size: 40px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .body {
+    padding: 2rem 1.25rem;
+  }
+  .header-flex {
+    flex-direction: column;
+  }
+  .boxWrapper {
+    width: 100%;
+  }
+}

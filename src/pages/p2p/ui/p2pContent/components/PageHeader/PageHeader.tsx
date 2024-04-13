@@ -5,7 +5,7 @@ import classes from "./PageHeader.module.css";
 
 export const PageHeader = () => {
   return (
-    <Group gap={32}>
+    <Group className={classes.headerFlex} gap={'clamp(28px, 2vw, 2rem)'}>
       <Text className={classes.headerTitle}>P2P</Text>
       <div className={classes.headerBannerWrapper}>
         <div className={classes.headerBannerRadius}>
