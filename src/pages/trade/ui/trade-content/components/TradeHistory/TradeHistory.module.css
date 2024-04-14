@@ -8,3 +8,9 @@
   font-family: "ProximaNova";
   color: var(--color-grey);
 }
+
+@media (max-width: 1380px) {
+  .container {
+    padding: 2rem 1.25rem !important;
+  }
+}

@@ -7,7 +7,7 @@ import { MarketTradesTab } from "./tabs/MarketTradesTab/MarketTradesTab";
 export const MarketTrades = () => {
   return (
     <div className={classes.marketTradesContainer}>
-      <Container>
+      <Container className={classes.container}>
         <Tabs
           tabsControllsWidth={"fit-content"}
           tabControllPadding={"0 16px"}

@@ -109,3 +109,37 @@
   @mixin text-2-craft-font;
   font-weight: 600;
 }
+
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 100%;
+    padding: 2rem 1.25rem;
+  }
+  .label {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 1.75rem;
+  }
+  .select-wrap span {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapper > div {
+    grid-gap: 1rem;
+    flex-direction: column;
+  }
+  .bottom-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    grid-gap: 1rem;
+  }
+  .bottom-flex > div {
+    width: 100%;
+  }
+  .list {
+    width: auto;
+  }
+}

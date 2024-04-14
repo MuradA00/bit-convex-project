@@ -256,9 +256,10 @@ export const OrdersTab = () => {
     if (cell === sortState.sortCol) setSortState({ ...sortState, sortFunc: sortState.sortFunc === 3 ? 1 : ((sortState.sortFunc + 1) as 2 | 3) });
   };
   return (
+    <div className={classes.tableWrapper}>
     <Table className={classes.table} withRowBorders={false}>
       <Table.Thead>
-        <Table.Tr>
+        <Table.Tr className={classes.trHeaders}>
           {header.map((cell) => (
             <Table.Th key={cell}>
               <Group gap={0} onClick={() => sortHandler(cell)}>
@@ -279,7 +280,7 @@ export const OrdersTab = () => {
       </Table.Thead>
       <Table.Tbody>
         {data.map((row, i) => (
-          <Table.Tr key={i}>
+          <Table.Tr className={classes.row} key={i}>
             {row.map((cell) => (
               <Table.Td key={cell.key} className={clsx({ [classes.green]: cell.value === "Buy", [classes.red]: cell.value === "Sell" })}>
                 {cell.value}
@@ -292,5 +293,6 @@ export const OrdersTab = () => {
         ))}
       </Table.Tbody>
     </Table>
+    </div>
   );
 };

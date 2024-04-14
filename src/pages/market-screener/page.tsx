@@ -34,7 +34,7 @@ export function Page() {
           <Stack gap={'clamp(1rem, 2vw, 2rem)'}>
             <Group>
               <Flex justify="center" align="center" className={classes.iconWrapper}>
-                <img draggable="false" src={`${import.meta.env.BASE_URL}assets/market-screener-icon.png`} alt="market-screener" />
+                <img id={classes.icon} draggable="false" src={`${import.meta.env.BASE_URL}assets/market-screener-icon.png`} alt="market-screener" />
               </Flex>
               <Title className={classes.title} c="white" order={2} fz={54}>
                 Market Screener

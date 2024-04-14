@@ -256,6 +256,7 @@ export const HistoryTab = () => {
     if (cell === sortState.sortCol) setSortState({ ...sortState, sortFunc: sortState.sortFunc === 3 ? 1 : ((sortState.sortFunc + 1) as 2 | 3) });
   };
   return (
+    <div className={classes.tableWrapper}>
     <Table className={classes.table} withRowBorders={false}>
       <Table.Thead>
         <Table.Tr>
@@ -289,5 +290,6 @@ export const HistoryTab = () => {
         ))}
       </Table.Tbody>
     </Table>
+    </div>
   );
 };

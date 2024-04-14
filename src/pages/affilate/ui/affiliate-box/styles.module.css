@@ -207,6 +207,7 @@
   .cardWrapper {
     min-height: 102px;
     justify-content: center;
+    width: auto;
   }
   .copyRefContainer {
     grid-gap: 8px;
@@ -253,5 +254,11 @@
   }
   .scroll-container {
     overflow-x: scroll;
+  }
+}
+
+@media (max-width: 400px) {
+  .cardWrapper {
+    padding: 1rem;
   }
 }

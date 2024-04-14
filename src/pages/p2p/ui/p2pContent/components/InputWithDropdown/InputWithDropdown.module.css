@@ -93,4 +93,7 @@
   .input input {
     padding: 24px 200px 24px 24px;
   }
+  .label {
+    font-size: 14px;
+  }
 }

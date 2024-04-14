@@ -3,7 +3,6 @@
   display: flex;
   justify-content: center;
   width: 75%;
-  /* background-color: red; */
   padding-top: 20px;
   margin-top: 29px;
 }
@@ -14,7 +13,6 @@
   align-items: flex-end;
   justify-content: center;
   position: relative;
-  /* background-color: yellow; */
 }
 .analysisGraphSections {
   position: absolute;
@@ -103,5 +101,75 @@
 @media (max-width: 1200px) {
   .analysisGraphSectorsContainer {
     transform: scale(.75);
+  }
+  .analysisGraphContainer {
+    width: 100%;
+  }
+  .analysisLabel {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .analysisGraphSectorsContainer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scale(.45);
+  }
+  .analysisGraphContainer {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  .relative {
+    min-height: 130px;
+    width: 100%;
+  }
+  .levelOne {
+    top: 90px !important;
+  }
+  .levelTwo {
+    top: 50px !important;
+    left: 14px !important;
+  }
+  .levelThree {
+    top: 24px !important;
+  }
+  .levelFive {
+    right: -10px !important;
+    top: 80px !important;
+  }
+  .levelFour {
+    right: 40px !important;
+    top: 42px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .levelTwo {
+    top: 45px !important;
+    left: 64px !important;
+  }
+  .levelOne {
+    left: 50px !important;
+  }
+  .levelThree {
+    top: 24px !important;
+  }
+  .levelFive {
+    right: 40px !important;
+    top: 80px !important;
+  }
+  .levelFour {
+    right: 90px !important;
+    top: 42px !important;
+  }
+  .analysisGraphContainer {
+    max-width: 340px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .levelOne {
+    left: 40px !important;
   }
 }

@@ -13,7 +13,7 @@ const tabs = [
 export const Payment = () => {
   return (
     <Stack>
-      <Container>
+      <Container style={{padding: '2rem clamp(1.5rem, 2vw, 2rem) 2rem clamp(1.5rem, 2vw, 2rem)'}}>
         <Tabs overflowContainer={false} tabs={tabs} />
       </Container>
     </Stack>

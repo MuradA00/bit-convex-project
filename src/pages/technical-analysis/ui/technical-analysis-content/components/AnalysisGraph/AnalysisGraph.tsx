@@ -25,18 +25,20 @@ export const AnalysisGraph = ({ percents }: AnalysisGraphProps) => {
       <p className={clsx(classes.analysisLabel, classes.levelThree)}>Neutral</p>
       <p className={clsx(classes.analysisLabel, classes.levelFour)}>Buy</p>
       <p className={clsx(classes.analysisLabel, classes.levelFive)}>Strong buy</p>
+    <div style={{position: 'relative'}} className={classes.relative}>
       <div className={classes.analysisGraphSectorsContainer}>
-        <RedSection style={{ position: "absolute", bottom: 0, right: 0, zIndex: 5 }} />
-        <PinkSection style={{ position: "absolute", bottom: 0, right: 0, zIndex: 5 }} />
-        <YellowSection style={{ position: "absolute", bottom: 0, right: 0, zIndex: 5 }} />
-        <LightGreenSection style={{ position: "absolute", bottom: 0, right: 0, zIndex: 5 }} />
-        <GreenSection style={{ position: "absolute", bottom: 0, right: 0, zIndex: 5 }} />
-        <div className={classes.analysisGraphInnerContainer}>
-          <div className={classes.analysisGraphInnerGradient}></div>
+          <RedSection style={{ position: "absolute", bottom: 0, right: 0, zIndex: 5 }} />
+          <PinkSection style={{ position: "absolute", bottom: 0, right: 0, zIndex: 5 }} />
+          <YellowSection style={{ position: "absolute", bottom: 0, right: 0, zIndex: 5 }} />
+          <LightGreenSection style={{ position: "absolute", bottom: 0, right: 0, zIndex: 5 }} />
+          <GreenSection style={{ position: "absolute", bottom: 0, right: 0, zIndex: 5 }} />
+          <div className={classes.analysisGraphInnerContainer}>
+            <div className={classes.analysisGraphInnerGradient}></div>
+          </div>
+          <div className={classes.analysisGraphArrowRound}></div>
+          <div style={{ rotate: `${arrowAngle}deg` }} className={classes.analysisGraphArrow}></div>
         </div>
-        <div className={classes.analysisGraphArrowRound}></div>
-        <div style={{ rotate: `${arrowAngle}deg` }} className={classes.analysisGraphArrow}></div>
-      </div>
+    </div>
     </div>
   );
 };

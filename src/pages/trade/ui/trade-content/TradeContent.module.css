@@ -3,7 +3,14 @@
 }
 
 @media (max-width: 1380px) {
-  .wrapper {
+  .table-flex {
     flex-direction: column;
+    height: 100% !important;
+  }
+  .table-flex > div {
+    width: 100% !important;
+  }
+  .firstCol {
+    width: 100% !important;
   }
 }

@@ -1,4 +1,4 @@
-import { Flex, Image, rem } from "@mantine/core";
+import { Flex, Image } from "@mantine/core";
 import "react-circular-progressbar/dist/styles.css";
 
 import { DepositsBox } from "@/pages/deposit/ui";
@@ -19,7 +19,7 @@ export function Page() {
       <Header />
       <Container>
         <Sidebar>
-          <Flex gap={rem(32)}>
+          <Flex className={classes.boxWrapper}>
             <DepositsBox height={804} />
             <WithdrawBox />
           </Flex>

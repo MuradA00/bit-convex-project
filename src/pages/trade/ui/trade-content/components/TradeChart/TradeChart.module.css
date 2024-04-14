@@ -25,3 +25,24 @@
     color: var(--color-blue);
   }
 }
+
+@media (max-width: 1380px) {
+  .chartContainer {
+    padding: 2rem 1.5rem !important;
+  }
+  .tradeChartTitle {
+    font-size: 24px !important;
+  }
+  .button-flex {
+    grid-gap: 1rem;
+    margin-bottom: 0 !important;
+  }
+  .periodButton {
+    height: 2rem !important;
+    padding: 0 1rem;
+  }
+  .button-flex [aria-haspopup="listbox"] {
+    height: 2rem;
+    padding: 0 1rem !important;
+  }
+}

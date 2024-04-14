@@ -7,7 +7,7 @@ export const TechnicalAnalysisContent = () => {
   return (
     <Stack gap={32} py={64}>
       <Header />
-      <Group gap={30}>
+      <Group className="analysisGrid" gap={'clamp(12px, 1.875vw, 30px)'}>
         <Analysis percents={5} currency="btcusd" />
         <Analysis percents={25} currency="btcusd" />
         <Analysis percents={45} currency="btcusd" />

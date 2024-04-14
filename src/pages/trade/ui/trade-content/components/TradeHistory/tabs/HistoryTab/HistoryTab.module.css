@@ -63,3 +63,18 @@
     }
   }
 }
+
+@media (max-width: 1280px) {
+  .table-wrapper {
+    overflow-x: scroll;
+  }
+  .table-wrapper table {
+    min-width: 1000px;
+  }
+  .table tr td {
+    padding: 12px 0;
+  }
+  .table th {
+    padding: 12px 0;
+  }
+}

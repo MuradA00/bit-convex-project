@@ -317,7 +317,7 @@ export const TradeChart = () => {
         <Text className={classes.tradeChartTitle}>Bitcoin/USDT Chart</Text>
         <Coins />
       </Group>
-      <Group mt={20} mb={32}>
+      <Group className={classes.buttonFlex} mt={20} mb={32}>
         {period.map((item) => (
           <button
             key={item.value}

@@ -4,3 +4,9 @@
   flex-direction: column;
   overflow: hidden;
 }
+
+@media (max-width: 1380px) {
+  .marketTradesContainer {
+    display: none;
+  }
+}

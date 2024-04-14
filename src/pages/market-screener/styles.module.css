@@ -184,6 +184,10 @@
   .title {
     font-size: 40px !important;
   }
+  #icon {
+    width: 2rem;
+    height: 2rem;
+  }
   .description {
     font-size: 1rem;
   }

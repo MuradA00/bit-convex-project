@@ -385,3 +385,10 @@ div[style*="min-width: 100%"][style*="display: table"] > div > div {
 .mantine-Pagination-control:hover {
   background-color: rgba(255,255,255,.1) !important;
 }
+
+@media (max-width: 500px) {
+  .analysisGrid {
+    display: flex;
+    flex-direction: column;
+  }
+}

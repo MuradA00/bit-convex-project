@@ -81,3 +81,21 @@
   width: 100%;
   height: 100%;
 }
+
+@media (max-width: 1380px) {
+  .tabsContainer {
+    grid-gap: 1rem;
+  }
+  .tabContent table {
+    max-width: 100%;
+  }
+  .tabsControllWrapper p {
+    font-size: 14px;
+  }
+  .tabsContainer {
+    grid-gap: 0;
+  }
+  .tab {
+    padding-bottom: 24px;
+  }
+}

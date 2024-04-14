@@ -76,7 +76,7 @@ export const WithdrawBox = () => {
             placeholder="Maximum amount withdrawable: 0 Bitcoin"
             {...getInputProps("amount")}
           />
-          <Flex align={"center"} justify={"space-between"}>
+          <Flex className={classes.bottomFlex} align={"center"} justify={"space-between"}>
             <Stack gap={rem(4)}>
               <Text className={classes.label}>Bitcoin Network Fee</Text>
               <Text className={classes.text}>Transactions on the Bitcoin network are priorirized by fees</Text>

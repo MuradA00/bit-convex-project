@@ -12,11 +12,11 @@ import { TradeHistory } from "./components/TradeHistory/TradeHistory";
 export const TradeContent = () => {
   return (
     <Stack gap={20} py={64}>
-      <Group gap={20} align="stretch" h={1134} wrap="nowrap">
-        <Stack gap={20} w={345}>
+      <Group className={classes.tableFlex} gap={20} align="stretch" h={1134} wrap="nowrap">
+        <Stack className={classes.firstCol} gap={20} w={345}>
           <OrderBook />
         </Stack>
-        <Stack style={{ flex: 1 }} gap={20}>
+        <Stack className={classes.secondCol} style={{ flex: 1 }} gap={20}>
           <TradeChart />
           <MarketStats />
         </Stack>

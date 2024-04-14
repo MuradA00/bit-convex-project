@@ -19,10 +19,10 @@ export const MarketStats = () => {
 
   return (
     <div style={{ flex: 1 }}>
-      <Container padding={48}>
+      <Container className={classes.container} padding={48}>
         <Group h={"100%"} align="center">
           <div style={{ flex: 1 }}>
-            <Stack gap={32}>
+            <Stack gap={'clamp(24px, 2vw, 2rem)'}>
               <Group className={classes.headeContainer}>
                 <Group align="center">
                   <Group gap={8} align="center">
@@ -68,7 +68,7 @@ export const MarketStats = () => {
                 </Group>
               </Stack>
             </Stack>
-            <Group gap={20} justify="space-between" mt={64}>
+            <Group className={classes.adaptive} gap={20} justify="space-between" mt={64}>
               <div className={classes.statBlockContainer}>
                 <Group gap={4} mb={16} className={classes.statBlockHeader}>
                   <MarketCapCurveIcon />
